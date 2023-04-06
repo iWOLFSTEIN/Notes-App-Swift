@@ -13,6 +13,10 @@
 		12FA731E29DEE707003D16C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12FA731C29DEE707003D16C0 /* Main.storyboard */; };
 		12FA732029DEE707003D16C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12FA731F29DEE707003D16C0 /* Assets.xcassets */; };
 		12FA732329DEE707003D16C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12FA732129DEE707003D16C0 /* LaunchScreen.storyboard */; };
+		12FA732E29DEE752003D16C0 /* NotesList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12FA732A29DEE751003D16C0 /* NotesList.storyboard */; };
+		12FA732F29DEE752003D16C0 /* CreateNote.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12FA732B29DEE752003D16C0 /* CreateNote.storyboard */; };
+		12FA733029DEE752003D16C0 /* NotesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FA732C29DEE752003D16C0 /* NotesListViewController.swift */; };
+		12FA733129DEE752003D16C0 /* CreateNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FA732D29DEE752003D16C0 /* CreateNoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		12FA731F29DEE707003D16C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12FA732229DEE707003D16C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12FA732429DEE707003D16C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12FA732A29DEE751003D16C0 /* NotesList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = NotesList.storyboard; path = "../../Notes Keeper/Notes Keeper/NotesList.storyboard"; sourceTree = "<group>"; };
+		12FA732B29DEE752003D16C0 /* CreateNote.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CreateNote.storyboard; path = "../../Notes Keeper/Notes Keeper/CreateNote.storyboard"; sourceTree = "<group>"; };
+		12FA732C29DEE752003D16C0 /* NotesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesListViewController.swift; path = "../../Notes Keeper/Notes Keeper/NotesListViewController.swift"; sourceTree = "<group>"; };
+		12FA732D29DEE752003D16C0 /* CreateNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateNoteViewController.swift; path = "../../Notes Keeper/Notes Keeper/CreateNoteViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				12FA731F29DEE707003D16C0 /* Assets.xcassets */,
 				12FA732129DEE707003D16C0 /* LaunchScreen.storyboard */,
 				12FA732429DEE707003D16C0 /* Info.plist */,
+				12FA732B29DEE752003D16C0 /* CreateNote.storyboard */,
+				12FA732D29DEE752003D16C0 /* CreateNoteViewController.swift */,
+				12FA732A29DEE751003D16C0 /* NotesList.storyboard */,
+				12FA732C29DEE752003D16C0 /* NotesListViewController.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -125,7 +137,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12FA732E29DEE752003D16C0 /* NotesList.storyboard in Resources */,
 				12FA732329DEE707003D16C0 /* LaunchScreen.storyboard in Resources */,
+				12FA732F29DEE752003D16C0 /* CreateNote.storyboard in Resources */,
 				12FA732029DEE707003D16C0 /* Assets.xcassets in Resources */,
 				12FA731E29DEE707003D16C0 /* Main.storyboard in Resources */,
 			);
@@ -138,8 +152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12FA733029DEE752003D16C0 /* NotesListViewController.swift in Sources */,
 				12FA731B29DEE707003D16C0 /* ViewController.swift in Sources */,
 				12FA731729DEE707003D16C0 /* AppDelegate.swift in Sources */,
+				12FA733129DEE752003D16C0 /* CreateNoteViewController.swift in Sources */,
 				12FA731929DEE707003D16C0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
