@@ -17,6 +17,7 @@
 		12FA732F29DEE752003D16C0 /* CreateNote.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12FA732B29DEE752003D16C0 /* CreateNote.storyboard */; };
 		12FA733029DEE752003D16C0 /* NotesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FA732C29DEE752003D16C0 /* NotesListViewController.swift */; };
 		12FA733129DEE752003D16C0 /* CreateNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FA732D29DEE752003D16C0 /* CreateNoteViewController.swift */; };
+		12FA733529DFF5F5003D16C0 /* noteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FA733429DFF5F5003D16C0 /* noteModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		12FA732B29DEE752003D16C0 /* CreateNote.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CreateNote.storyboard; path = "../../Notes Keeper/Notes Keeper/CreateNote.storyboard"; sourceTree = "<group>"; };
 		12FA732C29DEE752003D16C0 /* NotesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesListViewController.swift; path = "../../Notes Keeper/Notes Keeper/NotesListViewController.swift"; sourceTree = "<group>"; };
 		12FA732D29DEE752003D16C0 /* CreateNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateNoteViewController.swift; path = "../../Notes Keeper/Notes Keeper/CreateNoteViewController.swift"; sourceTree = "<group>"; };
+		12FA733429DFF5F5003D16C0 /* noteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,10 +73,11 @@
 				12FA731F29DEE707003D16C0 /* Assets.xcassets */,
 				12FA732129DEE707003D16C0 /* LaunchScreen.storyboard */,
 				12FA732429DEE707003D16C0 /* Info.plist */,
-				12FA732B29DEE752003D16C0 /* CreateNote.storyboard */,
 				12FA732D29DEE752003D16C0 /* CreateNoteViewController.swift */,
 				12FA732A29DEE751003D16C0 /* NotesList.storyboard */,
+				12FA732B29DEE752003D16C0 /* CreateNote.storyboard */,
 				12FA732C29DEE752003D16C0 /* NotesListViewController.swift */,
+				12FA733429DFF5F5003D16C0 /* noteModel.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12FA733029DEE752003D16C0 /* NotesListViewController.swift in Sources */,
+				12FA733529DFF5F5003D16C0 /* noteModel.swift in Sources */,
 				12FA731B29DEE707003D16C0 /* ViewController.swift in Sources */,
 				12FA731729DEE707003D16C0 /* AppDelegate.swift in Sources */,
 				12FA733129DEE752003D16C0 /* CreateNoteViewController.swift in Sources */,
