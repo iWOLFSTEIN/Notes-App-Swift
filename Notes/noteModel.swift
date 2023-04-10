@@ -9,9 +9,9 @@ import Foundation
 
 
 struct Notes{
-    let heading: String
-    let noteBody: String
-    let time: Date
+    var heading: String
+    var noteBody: String
+    var time: Date
     
     init(head heading: String, note noteBody: String, timestamp time: Date){
         self.heading = heading
