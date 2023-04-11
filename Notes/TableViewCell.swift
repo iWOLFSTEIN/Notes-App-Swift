@@ -11,6 +11,10 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var cellHeading: UILabel!
     @IBOutlet weak var cellTrailingText: UILabel!
     @IBOutlet weak var cellSubheading: UILabel!
+    @IBOutlet weak var deleteButton: UIButton!
+    weak var tableView: UITableView?
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,7 +23,23 @@ class TableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
+    
+    
+    @IBAction func deleteNote(_ sender: UIButton) {
+        guard let tableView = self.superview as? UITableView else {
+                   return
+               }
+        
+        guard let button = sender as? UIButton,
+                 let cell = button.superview?.superview as? TableViewCell,
+              let indexPath = tableView.indexPath(for: cell) else {
+               return
+           }
+
+        notesList.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .fade)
+    }
+    
     
 }
