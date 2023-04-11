@@ -25,10 +25,33 @@ class NotesListViewController: UIViewController{
         table.rowHeight = 70
         addNoteButton.layer.cornerRadius = 25
 
-       
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress))
+        table.addGestureRecognizer(longPressGesture)
+
+    }
+
+    @objc func handleLongPress(_ gestureRecognizer: UILongPressGestureRecognizer) {
+        if gestureRecognizer.state == .began {
+            let touchPoint = gestureRecognizer.location(in: table)
+            if let indexPath = table.indexPathForRow(at: touchPoint) {
+                selectCell(at: indexPath)
+            }
+        }
     }
 
     
+    func selectCell(at indexPath: IndexPath) {
+        if let cell = table.cellForRow(at: indexPath) as? TableViewCell {
+            cell.isSelected = true
+            // Handle any additional selection-related logic here
+            print("cell is selected")
+            cell.contentView.backgroundColor = .blue
+            cell.deleteButton.isHidden = false
+            cell.cellTrailingText.isHidden = true
+
+        }
+    }
+
     
     @IBAction func addNote(_ sender: UIButton) {
         
@@ -62,13 +85,11 @@ extension NotesListViewController: UITableViewDelegate, UITableViewDataSource, S
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? TableViewCell
         
-//        cell?.textLabel?.text = notesList[indexPath.item].heading
-//        cell?.textLabel?.textColor = UIColor.white
-//        cell?.contentView.backgroundColor = UIColor(red: 68/255, green: 60/255, blue: 104/255, alpha: 1.0)
         cell?.cellHeading.text = notesList[indexPath.item].heading
         cell?.cellSubheading.text = notesList[indexPath.item].noteBody
         cell?.cellTrailingText.text = DateToString(notesList[indexPath.item].time)
-//        cell?.layer.cornerRadius = 5
+        cell?.deleteButton.isHidden = true
+        cell?.layer.cornerRadius = 5
 
         
   
@@ -87,18 +108,33 @@ extension NotesListViewController: UITableViewDelegate, UITableViewDataSource, S
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let storyboard = UIStoryboard(name: "CreateNote", bundle: nil)
-        let destinationVC = storyboard.instantiateViewController(withIdentifier: "CreateNoteViewController") as! CreateNoteViewController
-        destinationVC.delegate = self
+            if let cell = tableView.cellForRow(at: indexPath) as? TableViewCell {
+                if cell.isSelected {
+                    tableView.deselectRow(at: indexPath, animated: true)
+                    print("cell is unselected")
+                    cell.contentView.backgroundColor = UIColor(red: 68/255, green: 60/255, blue: 104/255, alpha: 1.0)
+                    cell.deleteButton.isHidden = true
+                    cell.cellTrailingText.isHidden = false
+                }
+                
+            }
+//        else{
+            let storyboard = UIStoryboard(name: "CreateNote", bundle: nil)
+            let destinationVC = storyboard.instantiateViewController(withIdentifier: "CreateNoteViewController") as! CreateNoteViewController
+            destinationVC.delegate = self
+            
+            updateIndex = indexPath.item
+            destinationVC.noteModel = notesList[indexPath.item]
+            destinationVC.isNewNote = false
+            
+            self.present(destinationVC, animated: true, completion: nil)
+//        }
         
-        updateIndex = indexPath.item
-//        print(updateIndex)
-        destinationVC.noteModel = notesList[indexPath.item]
-        destinationVC.isNewNote = false
-        
-        self.present(destinationVC, animated: true, completion: nil)
+      
     }
     
+    
+
 }
 
 

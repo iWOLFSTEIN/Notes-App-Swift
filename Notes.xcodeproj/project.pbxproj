@@ -31,10 +31,10 @@
 		12FA731F29DEE707003D16C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12FA732229DEE707003D16C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12FA732429DEE707003D16C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		12FA732A29DEE751003D16C0 /* NotesList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = NotesList.storyboard; path = "../../Notes Keeper/Notes Keeper/NotesList.storyboard"; sourceTree = "<group>"; };
-		12FA732B29DEE752003D16C0 /* CreateNote.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CreateNote.storyboard; path = "../../Notes Keeper/Notes Keeper/CreateNote.storyboard"; sourceTree = "<group>"; };
-		12FA732C29DEE752003D16C0 /* NotesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesListViewController.swift; path = "../../Notes Keeper/Notes Keeper/NotesListViewController.swift"; sourceTree = "<group>"; };
-		12FA732D29DEE752003D16C0 /* CreateNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateNoteViewController.swift; path = "../../Notes Keeper/Notes Keeper/CreateNoteViewController.swift"; sourceTree = "<group>"; };
+		12FA732A29DEE751003D16C0 /* NotesList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NotesList.storyboard; sourceTree = "<group>"; };
+		12FA732B29DEE752003D16C0 /* CreateNote.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateNote.storyboard; sourceTree = "<group>"; };
+		12FA732C29DEE752003D16C0 /* NotesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesListViewController.swift; sourceTree = "<group>"; };
+		12FA732D29DEE752003D16C0 /* CreateNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNoteViewController.swift; sourceTree = "<group>"; };
 		12FA733429DFF5F5003D16C0 /* noteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteModel.swift; sourceTree = "<group>"; };
 		12FA733A29E42F76003D16C0 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		12FA733B29E42F76003D16C0 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
