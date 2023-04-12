@@ -27,6 +27,10 @@ class NotesListViewController: UIViewController{
 
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress))
         table.addGestureRecognizer(longPressGesture)
+        
+        
+        addNoteButton.layer.shadowOffset = CGSize(width: 0, height: 2)
+        addNoteButton.layer.shadowOpacity = 0.5
 
     }
 

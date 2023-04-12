@@ -39,6 +39,12 @@ class TableViewCell: UITableViewCell {
 
         notesList.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .fade)
+        
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        cell.contentView.backgroundColor = UIColor(red: 68/255, green: 60/255, blue: 104/255, alpha: 1.0)
+        cell.deleteButton.isHidden = true
+        cell.cellTrailingText.isHidden = false
     }
     
     
